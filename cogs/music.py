@@ -19,14 +19,6 @@ class music():
             else:
                 queues[server.id] = [player]
                 await bot.say('Video queued.')
-        else:
-            player = await voice_client.create_ytdl_player(url, after=lambda: check_queue(server.id))
-            players[server.id] = player
-            player.start()
-            except KeyError:
-                player = await voice_client.create_ytdl_player(url, after=lambda: check_queue(server.id))
-                players[server.id] = player
-                player.start()
                         
 def setup(bot):
     bot.add_cog(music(bot))
