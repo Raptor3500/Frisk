@@ -176,7 +176,7 @@ async def leave(ctx):
   await voice_client.disconnect()
   
 @bot.command(pass_context=True)
-async def play(ctx, *,url):
+async def play2(ctx, *,url):
   server = ctx.message.server
   voice_client = bot.voice_client_in(server)
   if server.id not in players:
