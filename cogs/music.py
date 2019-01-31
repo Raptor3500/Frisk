@@ -27,3 +27,5 @@ class music():
                         players[server.id] = player
                         player.start()
                         
+def setup(bot):
+    bot.add_cog(music(bot))
