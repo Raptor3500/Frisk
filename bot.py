@@ -176,14 +176,14 @@ async def leave(ctx):
   await voice_client.disconnect()
   
 @bot.command(pass_context=True)
-async def play2(ctx, *,url):
+async def play(ctx, *,url):
   server = ctx.message.server
   voice_client = bot.voice_client_in(server)
   if server.id not in players:
     player = await voice_client.create_ytdl_player(url, ytdl_options={'default_search': 'auto'}, after=lambda: check_queue(server.id))
     players[server.id] = player
     player.start()
-  elif server.id in players:
+  else:
     server = ctx.message.server
     voice_client = bot.voice_client_in(server)
     player = await voice_client.create_ytdl_player(url, ytdl_options={'default_search': 'auto'}, after=lambda: check_queue(server.id))
@@ -193,20 +193,16 @@ async def play2(ctx, *,url):
     else:
         queues[server.id] = [player]
     await bot.say('Video queued.')
-      
-
-  
+    
 @bot.command(pass_context=True)
 async def pause(ctx):
   id = ctx.message.server.id
   players[id].pause()
   
-
 @bot.command(pass_context=True)
 async def stop(ctx):
   id = ctx.message.server.id
   players[id].stop()
-
 
 @bot.command(pass_context=True)
 async def resume(ctx):
