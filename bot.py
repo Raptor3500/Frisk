@@ -50,7 +50,7 @@ async def on_ready():
   
   # Make me say stuff
 @bot.command(pass_context=True)
-async def say(ctx, *args):
+async def say(ctx, *, args):
   """Make me say your message"""
   if ctx.message.author.id in ownerID:
     channel = ctx.message.channel
