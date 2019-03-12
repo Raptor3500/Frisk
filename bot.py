@@ -32,8 +32,6 @@ def check_queue(id):
     player = queues[id].pop(0)
     players[id] = player
     player.start()
-  else:
-    del players[id]
 
 # To remove the help command and make your own help command
 #bot.remove_command('help')
@@ -172,16 +170,17 @@ async def leave(ctx):
   server = ctx.message.server
   voice_client = bot.voice_client_in(server)
   await voice_client.disconnect()
-  
+    
 @bot.command(pass_context=True)
 async def play(ctx, *,url):
-  server = ctx.message.server
-  voice_client = bot.voice_client_in(server)
-  if server.id not in players:
+    server = ctx.message.server
+    voice_client = bot.voice_client_in(server)
     player = await voice_client.create_ytdl_player(url, ytdl_options={'default_search': 'auto'}, after=lambda: check_queue(server.id))
     players[server.id] = player
     player.start()
-  else:
+
+@bot.command(pass_context=True)
+async def queue(ctx, *,url):
     server = ctx.message.server
     voice_client = bot.voice_client_in(server)
     player = await voice_client.create_ytdl_player(url, ytdl_options={'default_search': 'auto'}, after=lambda: check_queue(server.id))
