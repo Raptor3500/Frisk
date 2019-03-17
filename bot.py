@@ -148,18 +148,18 @@ async def choose(str : str, *args):
   
 @bot.command()
 async def setgame(str : str, ctx, *args):
+  mesg = ' '.join(args)
+  str = str.strip()
   if ctx.message.author.id in ownerID:
-    mesg = ' '.join(args)
-    str = str.strip()
-  if 'playing' in str:
-      await bot.change_presence(game=discord.Game(name= (mesg)))
-      await bot.say("I am now playing " + mesg)
-  if 'listening' in str:
-      await bot.change_presence(game=discord.Game(name= mesg, type=2))
-      await bot.say("I am now listening to " + mesg)
-  if 'watching' in str:
-      await bot.change_presence(game=discord.Game(name= mesg, type=3))
-      await bot.say("I am now watching " + mesg)
+    if 'playing' in str:
+        await bot.change_presence(game=discord.Game(name= (mesg)))
+        await bot.say("I am now playing " + mesg)
+    if 'listening' in str:
+        await bot.change_presence(game=discord.Game(name= mesg, type=2))
+        await bot.say("I am now listening to " + mesg)
+    if 'watching' in str:
+        await bot.change_presence(game=discord.Game(name= mesg, type=3))
+        await bot.say("I am now watching " + mesg)
       
 @bot.command(pass_context=True)
 async def join(ctx):
