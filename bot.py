@@ -147,7 +147,7 @@ async def choose(str : str, *args):
   await bot.say('I choose {}'.format(random.choice(choices)))
   
 @bot.command()
-async def setgame(ctx, str : str, *args):
+async def setgame(str : str, ctx, *args):
   if ctx.message.author.id in ownerID:
     mesg = ' '.join(args)
     str = str.strip()
