@@ -149,8 +149,8 @@ async def choose(str : str, *args):
 @bot.command()
 async def setgame(str : str, ctx, *args):
   if ctx.message.author.id in ownerID:
-  mesg = ' '.join(args)
-  str = str.strip()
+    mesg = ' '.join(args)
+    str = str.strip()
   if 'playing' in str:
       await bot.change_presence(game=discord.Game(name= (mesg)))
       await bot.say("I am now playing " + mesg)
