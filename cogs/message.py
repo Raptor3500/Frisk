@@ -10,8 +10,8 @@ class message():
         self.bot = bot
 
     async def on_message(self, message):
-        if 'want sum fucc?' in message.content:
-            await self.bot.send_message(message.channel, " HELL YEAH ")
+        if 'Fucc' in message.content:
+            await self.bot.send_message(message.channel, "I wanna fuck sun. FAITH HELP ME OUT HERE DO AN ERP WITH GIO")
             
         if not message.author.bot and (message.server == None or self.bot.user in message.mentions):
             await self.bot.send_typing(message.channel)
