@@ -10,8 +10,8 @@ class message():
         self.bot = bot
 
     async def on_message(self, message):
-        if 'Fucc' in message.content:
-            await self.bot.send_message(message.channel, "I wanna fuck sun. FAITH HELP ME OUT HERE DO AN ERP WITH GIO")
+        if 'thank you everyone' in message.content:
+            await self.bot.send_message(message.channel, "This message is from Giovanni ^w^ he wanted to say thank you to everyone that means everyone in this server he honestly cares for you all but he doesnt wanna sound gay towards D'Shaun -.- but he loves him too as a friend of course. HEY GET THOSE THOUGHTS OUT OF YOUR HEAD I KNOW YOUR THINKING THEM! .............. Anyways... These are his words exactly 'I love you all thank you, you guys have no idea how much hapiness youve brought me so this is a sever I've made for us since a lot of us have switched to discord. I want us to stay friends so please dont leave. I hope our friendships last forever!' anyways those were his words unless you count mine as well since he coded this")
             
         if not message.author.bot and (message.server == None or self.bot.user in message.mentions):
             await self.bot.send_typing(message.channel)
