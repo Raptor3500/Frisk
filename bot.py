@@ -211,7 +211,7 @@ async def resume(ctx):
 async def secretmesg(ctx, *args):
   if ctx.message.author.id in ownerID:
     mesg = ' '.join(args)
-    await bot.send_message(discord.Object(id='528295857389305858'), mesg)
+    await bot.send_message(discord.Object(id='560558193613471745'), mesg)
     
 @bot.command(pass_context=True)
 async def secretdm(ctx, *args, user):
