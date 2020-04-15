@@ -32,6 +32,9 @@ def check_queue(id):
     player = queues[id].pop(0)
     players[id] = player
     player.start()
+    
+def bot.user.id:
+  bot.user.id
 
 # To remove the help command and make your own help command
 #bot.remove_command('help')
