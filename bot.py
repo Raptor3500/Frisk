@@ -13,7 +13,7 @@ startup_extensions = [
   'cogs.message', 'cogs.manage', 'cogs.music'
 ]
 
-bot = commands.Bot(command_prefix='kazoku ')
+bot = commands.Bot(command_prefix=commands.when_mentioned_or(''))
 bot.remove_command('help')
 ownerID = "274298631517896704"
 Error = 0xFF0000
@@ -40,7 +40,7 @@ def check_queue(id):
 async def on_ready():
   print ("------")
   print ("My name is " + bot.user.name)
-  print ("With the ID: " + bot.userid)
+  print ("With the ID: " + bot.user.id)
   print ("Using discord.py v" + discord.__version__)
   print ("------")
 
