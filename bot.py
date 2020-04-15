@@ -40,7 +40,7 @@ def check_queue(id):
 async def on_ready():
   print ("------")
   print ("My name is " + bot.user.name)
-  print ("With the ID: " + bot.user.id)
+  print ("With the ID: " + bot.userid)
   print ("Using discord.py v" + discord.__version__)
   print ("------")
 
