@@ -13,12 +13,12 @@ startup_extensions = [
   'cogs.message', 'cogs.manage', 'cogs.music'
 ]
 
-bot = commands.Bot(command_prefix='kazoku ')
+bot = commands.Bot(command_prefix='kokichi ')
 bot.remove_command('help')
 ownerID = "274298631517896704"
 Error = 0xFF0000
 messages = ['rock', 'paper', 'scissors']
-client = commands.Bot(command_prefix='kazoku ')
+client = commands.Bot(command_prefix='kokichi ')
 songs = asyncio.Queue()
 play_next_song = asyncio.Event()
 
