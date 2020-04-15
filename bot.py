@@ -9,7 +9,7 @@ import nacl.secret
 
 bot = commands.Bot(command_prefix='kokichi ')
 bot.remove_command('help')
-ownerID = str("274298631517896704")
+ownerID = '436294612521582603'
 Error = 0xFF0000
 messages = ['rock', 'paper', 'scissors']
 client = commands.Bot(command_prefix='kokichi ')
