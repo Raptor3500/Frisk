@@ -7,15 +7,9 @@ import random
 import youtube_dl
 import nacl.secret
 
-OPUS_LIBS = ['libopus-0.x86.dll', 'libopus-0.x64.dll', 'libopus-0.dll', 'libopus.so.0', 'libopus.0.dylib']
-
-startup_extensions = [
-  'cogs.message', 'cogs.manage', 'cogs.music'
-]
-
 bot = commands.Bot(command_prefix='kokichi ')
 bot.remove_command('help')
-ownerID = "274298631517896704"
+ownerID = str("274298631517896704")
 Error = 0xFF0000
 messages = ['rock', 'paper', 'scissors']
 client = commands.Bot(command_prefix='kokichi ')
