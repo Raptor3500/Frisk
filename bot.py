@@ -85,14 +85,6 @@ async def cmds(ctx):
   
   
   await bot.say(embed=embed)
-
-if __name__ == "__main__":
-    for extension in startup_extensions:
-        try:
-            bot.load_extension(extension)
-        except Exception as e:
-            exc = '{}: {}'.format(type(e).__name__, e)
-            print('Failed to load extension {}\n{}'.format(extension, exc))
     
 @bot.command(pass_context=True)
 async def info(ctx, user: discord.Member):
