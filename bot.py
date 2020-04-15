@@ -33,9 +33,6 @@ def check_queue(id):
     players[id] = player
     player.start()
     
-def bot.user.id:
-  bot.user.id
-
 # To remove the help command and make your own help command
 #bot.remove_command('help')
 
@@ -43,7 +40,7 @@ def bot.user.id:
 async def on_ready():
   print ("------")
   print ("My name is " + bot.user.name)
-  print ("With the ID: " + bot.user.id)
+  print ("With the ID: " + str(bot.user.id))
   print ("Using discord.py v" + discord.__version__)
   print ("------")
 
